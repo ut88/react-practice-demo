@@ -15,7 +15,8 @@ function ExpenseFrom(props){
         console.log(prevamount);
     }
     const clickHandler2=function (event) {
-        setdate(event.target.value)
+       const d=new Date(event.target.value)
+        setdate(d)
         console.log(prevdate);
     }
      const submitHandler=(event)=>{
