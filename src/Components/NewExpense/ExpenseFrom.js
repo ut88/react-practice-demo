@@ -15,9 +15,8 @@ function ExpenseFrom(props){
         console.log(prevamount);
     }
     const clickHandler2=function (event) {
-       const d=new Date(event.target.value)
-        setdate(d)
-        console.log(prevdate);
+        setdate(event.target.value);
+        console.log(event.target.value)
     }
      const submitHandler=(event)=>{
         event.preventDefault();
@@ -36,15 +35,15 @@ function ExpenseFrom(props){
             <div className="new-expense__controls">
              <div className="new-expense__controls">   
             <label className="new-expense__control label">Title</label>
-                <input  classname="new-expense__control input" type="text" value={prevtitle} onChange={clickHandler} />
+                <input  className="new-expense__control input" type="text" value={prevtitle} onChange={clickHandler} />
             </div>
             <div className="new-expense__controls">   
             <label className="new-expense__control label">Amount</label>
-                <input  classname="new-expense__control input" type="number" value={prevamount} min="0.01" step="0.01" onChange={clickHandler1} />
+                <input  className="new-expense__control input" type="number" value={prevamount} min="0.01" step="0.01" onChange={clickHandler1} />
             </div>
             <div className="new-expense__controls">   
             <label className="new-expense__control label">Date</label>
-                <input  classname="new-expense__control input" type="date" min="2019-01-01" max="2022-12-31" value={prevdate} onChange={clickHandler2}/>
+                <input  className="new-expense__control input" type="date" min="2019-01-01" max="2023-12-31" value={prevdate} onChange={clickHandler2}/>
             </div>
             <div className="new-expense__actions">
             <button>ADD EXPENSE</button>

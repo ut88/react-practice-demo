@@ -5,9 +5,9 @@ import './ExpenseItem.css';
 
 function ExpenseItem(props) {
   const [amount,setamount]=useState(props.amount);
-    function clickHandler(){
-        setamount(100);
-    }
+    // function clickHandler(){
+    //     setamount(100);
+    // }
   return (
     <Card className='expense-item'>
       <ExpenseDate date={props.date} />
@@ -15,7 +15,7 @@ function ExpenseItem(props) {
         <h2>{props.title}</h2>
         <div className='expense-item__price'>${amount}</div>
       </div>
-      <button onClick={clickHandler}>Delete Expense</button>
+      {/* <button onClick={clickHandler}>Delete Expense</button> */}
     </Card>
   );
 }
